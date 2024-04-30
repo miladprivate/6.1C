@@ -58,33 +58,11 @@ pipeline {
             steps {
                 echo 'Running integration tests on staging environment...'
                 // Run integration tests on staging environment
-            }
-            post {
-                success {
-                    echo 'Integration Tests on Staging passed successfully!'
-                    sendEmail('Integration Tests on Staging', 'SUCCESS')
-                }
-                failure {
-                    echo 'Integration Tests on Staging failed!'
-                    sendEmail('Integration Tests on Staging', 'FAILURE')
-                }
-            }
         }
         stage('Deploy to Production') {
             steps {
                 echo 'Deploying to production server...'
                 // Deploy application to production server using Jenkins Pipeline
-            }
-            post {
-                success {
-                    echo 'Deploy to Production completed successfully!'
-                    sendEmail('Deploy to Production', 'SUCCESS')
-                }
-                failure {
-                    echo 'Deploy to Production failed!'
-                    sendEmail('Deploy to Production', 'FAILURE')
-                }
-            }
         }
     }
 }
