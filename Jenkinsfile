@@ -6,17 +6,14 @@ pipeline {
             steps {
                 echo 'Building the code...'
                 // Use Maven for building
-                // Example: sh 'mvn clean package'
             }
         }
         stage('Unit and Integration Tests') {
             steps {
                 echo 'Running unit tests...'
                 // Use JUnit for unit tests
-                // Example: sh 'mvn test'
                 echo 'Running integration tests...'
                 // Use Selenium for integration tests
-                // Example: sh 'selenium-command'
             }
             post {
                 success {
@@ -33,14 +30,12 @@ pipeline {
             steps {
                 echo 'Performing code analysis...'
                 // Integrate with SonarQube for code analysis
-                // Example: sh 'sonar-scanner'
             }
         }
         stage('Security Scan') {
             steps {
                 echo 'Performing security scan...'
                 // Perform security scan using OWASP Dependency-Check
-                // Example: sh 'dependency-check'
             }
             post {
                 success {
@@ -57,14 +52,12 @@ pipeline {
             steps {
                 echo 'Deploying to staging server...'
                 // Deploy application to staging server using Jenkins Pipeline
-                // Example: sh 'deploy-to-staging-script'
             }
         }
         stage('Integration Tests on Staging') {
             steps {
                 echo 'Running integration tests on staging environment...'
                 // Run integration tests on staging environment
-                // Example: sh 'integration-tests-script'
             }
             post {
                 success {
@@ -81,7 +74,6 @@ pipeline {
             steps {
                 echo 'Deploying to production server...'
                 // Deploy application to production server using Jenkins Pipeline
-                // Example: sh 'deploy-to-production-script'
             }
             post {
                 success {
