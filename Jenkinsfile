@@ -58,11 +58,13 @@ pipeline {
             steps {
                 echo 'Running integration tests on staging environment...'
                 // Run integration tests on staging environment
+            }
         }
         stage('Deploy to Production') {
             steps {
                 echo 'Deploying to production server...'
                 // Deploy application to production server using Jenkins Pipeline
+            }
         }
     }
 }
